@@ -33,7 +33,9 @@
         </div>
         <div class="output">{{output}}</div>
         <div class="footer">
-            <button class="btnExecute" @click="execute">Run</button>
+            <div class="actions">
+                <button class="btnExecute" @click="execute">Run</button>
+            </div>
         </div>
     </div>
 </template>
@@ -50,7 +52,7 @@ export default {
     data() {
         return {
             values: {},
-            output: "output..."
+            output: "..."
         };
     },
     computed: {},
@@ -65,9 +67,25 @@ export default {
 <style scoped>
 .sandboxFunction {
     background: white;
+    border-radius: 4px;
+    padding: 18px;
 }
 .name {
     font-size: 18pt;
+}
+.fields {
+    margin-top: 8px;
+}
+.output {
+    margin: 8px 0px 8px 0px;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+}
+.actions {
+    margin-left: auto;
 }
 </style>
 

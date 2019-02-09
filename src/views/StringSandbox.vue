@@ -1,13 +1,16 @@
 <template>
     <div class="stringSandbox">
         <div class="title">Strings</div>
-        <SandboxFunction
-            v-for="(func, i) in funcs"
-            :key="i"
-            :name="func.name"
-            :fields="func.fields"
-            :func="func.func"
-        />
+        <div class="functions">
+            <SandboxFunction
+                class="sandboxFunction"
+                v-for="(func, i) in funcs"
+                :key="i"
+                :name="func.name"
+                :fields="func.fields"
+                :func="func.func"
+            />
+        </div>
     </div>
 </template>
 
@@ -37,6 +40,22 @@ export default {
 
 <style scoped>
 .stringSandbox {
-    background: gray;
+}
+.title {
+    font-size: 48pt;
+}
+.functions {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 8px;
+}
+.sandboxFunction {
+    transition: 0.2s;
+}
+.sandboxFunction:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 </style>
