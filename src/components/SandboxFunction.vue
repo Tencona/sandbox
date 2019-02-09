@@ -14,7 +14,7 @@
                         <input
                             class="stringInput"
                             type="text"
-                            placeholder="name"
+                            :placeholder="field.name"
                             v-model="values[field.key]"
                         >
                     </div>
@@ -24,7 +24,7 @@
                         <input
                             class="numberInput"
                             type="number"
-                            placeholder="name"
+                            :placeholder="field.name"
                             v-model="values[field.key]"
                         >
                     </div>
