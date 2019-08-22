@@ -1,8 +1,7 @@
 <template>
-    <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <StringSandbox/>
-    </div>
+	<div class="home">
+		<StringSandbox />
+	</div>
 </template>
 
 <script>
@@ -10,9 +9,9 @@
 import StringSandbox from "@/views/StringSandbox.vue";
 
 export default {
-    name: "home",
-    components: {
-        StringSandbox
-    }
+	name: "home",
+	components: {
+		StringSandbox
+	}
 };
 </script>
