@@ -16,7 +16,7 @@
 
 <script>
 import SandboxFunction from "../components/SandboxFunction.vue";
-let genString = require("../funcs/gen-string.js");
+let stringFuncs = require("../funcs/string-funs.js");
 
 export default {
     name: "StringSandbox",
@@ -31,7 +31,7 @@ export default {
         funcs() {
             var s = "";
             var aaa = "aaa";
-            return genString.funcs;
+            return stringFuncs.funcs;
         }
     },
     methods: {}
